@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+.settings-page {
+  min-height: 100vh;
+  background-color: #f6f7fa;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  transition: 0.3s;
+}
+
+.settings-card {
+  max-width: 850px;
+  margin: auto;
+  background-color: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.settings-card h1 {
+  color: #16233f;
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.settings-subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.settings-section {
+  border-top: 1px solid #e4e7ec;
+  padding: 25px 0;
+}
+
+.settings-section h2 {
+  color: #16233f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background-color: #fafafb;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+}
+
+.setting-row h3 {
+  margin: 0 0 5px;
+  color: #1f2430;
+  font-size: 15px;
+}
+
+.setting-row p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.setting-row button,
+.alarm-controls button,
+.stopwatch-buttons button {
+  background-color: #f2a93b;
+  color: #16233f;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.setting-row button:hover,
+.alarm-controls button:hover,
+.stopwatch-buttons button:hover {
+  background-color: #e09628;
+}
+
+.setting-row select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background-color: white;
+  color: #16233f;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.selected-language {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background-color: #eef6ff;
+  border-radius: 8px;
+  color: #16233f;
+  font-size: 13px;
+}
+
+.alarm-input {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.alarm-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.alarm-status {
+  color: #1f9d6c;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stopwatch-box {
+  background-color: #16233f;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stopwatch-time {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.stopwatch-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stopwatch-buttons button {
+  min-width: 100px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.feature-card {
+  padding: 20px;
+  background-color: #fafafb;
+  border: 1px solid #e4e7ec;
+  border-radius: 10px;
+}
+
+.feature-card span {
+  font-size: 25px;
+}
+
+.feature-card h3 {
+  margin: 10px 0 5px;
+  color: #16233f;
+  font-size: 15px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+  background-color: #111827;
+}
+
+.dark-mode .settings-card {
+  background-color: #1f2937;
+}
+
+.dark-mode .settings-card h1,
+.dark-mode .settings-section h2 {
+  color: white;
+}
+
+.dark-mode .settings-subtitle,
+.dark-mode .setting-row p {
+  color: #cbd5e1;
+}
+
+.dark-mode .settings-section {
+  border-color: #4b5563;
+}
+
+.dark-mode .setting-row {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+.dark-mode .setting-row h3 {
+  color: white;
+}
+
+.dark-mode .setting-row select,
+.dark-mode .alarm-input {
+  background-color: #1f2937;
+  color: white;
+  border-color: #6b7280;
+}
+
+.dark-mode .selected-language {
+  background-color: #374151;
+  color: white;
+}
+
+.dark-mode .feature-card {
+  background-color: #374151;
+  border-color: #4b5563;
+}
+
+.dark-mode .feature-card h3 {
+  color: white;
+}
+
+.dark-mode .feature-card p {
+  color: #cbd5e1;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 20px 10px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .setting-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alarm-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stopwatch-time {
+    font-size: 30px;
+  }
+}

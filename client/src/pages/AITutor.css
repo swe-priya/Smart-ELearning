@@ -1,0 +1,184 @@
+/* AITutor.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+.chatPage {
+  background-color: #F6F7FA;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.chatBox {
+  width: 100%;
+  max-width: 880px;
+  height: 85vh;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E4E7EC;
+  box-shadow: 0 4px 20px rgba(22, 35, 63, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background-color: #16233F;
+  color: #FFFFFF;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ai-icon {
+  font-size: 22px;
+}
+
+.header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.online-indicator {
+  font-size: 11px;
+  color: #1F9D6C;
+  font-weight: 500;
+}
+
+/* Quick Questions Bar */
+.quickQuestions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #FAFAFB;
+  border-bottom: 1px solid #E4E7EC;
+  overflow-x: auto;
+}
+
+.quickQuestions button {
+  background-color: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  color: #16233F;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.quickQuestions button:hover {
+  background-color: #FEF5E7;
+  border-color: #F2A93B;
+  color: #B45309;
+}
+
+/* Messages Area */
+.messages {
+  flex-grow: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: #FDFDFE;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 78%;
+}
+
+.user-align {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.ai-align {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.userMessage {
+  background-color: #16233F;
+  color: #FFFFFF;
+  padding: 12px 18px;
+  border-radius: 12px 12px 2px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.aiMessage {
+  background-color: #F6F7FA;
+  color: #1F2430;
+  padding: 14px 18px;
+  border-radius: 12px 12px 12px 2px;
+  border: 1px solid #E4E7EC;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.aiMessage.thinking {
+  color: #6B7280;
+  font-style: italic;
+}
+
+.timestamp {
+  font-size: 11px;
+  color: #9CA3AF;
+  margin-top: 4px;
+}
+
+/* Input Area */
+.inputArea {
+  padding: 16px 24px;
+  border-top: 1px solid #E4E7EC;
+  display: flex;
+  gap: 12px;
+  background-color: #FFFFFF;
+}
+
+.inputArea input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 1px solid #E4E7EC;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputArea input:focus {
+  border-color: #16233F;
+}
+
+.inputArea button {
+  background-color: #F2A93B;
+  color: #16233F;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.inputArea button:hover {
+  background-color: #e09628;
+}

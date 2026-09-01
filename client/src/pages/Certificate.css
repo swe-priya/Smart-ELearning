@@ -1,0 +1,240 @@
+/* Certificate.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+.cert-page {
+  background-color: #F6F7FA;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.cert-card {
+  width: 100%;
+  max-width: 820px;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E7EC;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(22, 35, 63, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top Accent Stripe */
+.cert-top-bar {
+  height: 8px;
+  background: linear-gradient(90deg, #16233F 0%, #F2A93B 100%);
+}
+
+.cert-inner-content {
+  padding: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CSS-only Seal */
+.css-seal-badge {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #F2A93B 0%, #d99128 100%);
+  border: 4px double #FFFFFF;
+  box-shadow: 0 0 0 2px #F2A93B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.seal-star {
+  color: #16233F;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.seal-text {
+  font-size: 8px;
+  font-weight: 700;
+  color: #16233F;
+  letter-spacing: 1px;
+}
+
+.cert-issuer-label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6B7280;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.cert-main-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #16233F;
+  margin-bottom: 6px;
+}
+
+.sub-header {
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 12px;
+}
+
+.student-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #16233F;
+  border-bottom: 2px solid #F2A93B;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
+.cert-description {
+  font-size: 13px;
+  color: #6B7280;
+  max-width: 540px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.course-title-highlight {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #16233F;
+  margin-bottom: 28px;
+}
+
+/* Details Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  padding: 18px;
+  background-color: #FAFAFB;
+  border-radius: 8px;
+  border: 1px solid #E4E7EC;
+  margin-bottom: 28px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.detail-label {
+  font-size: 11px;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.detail-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1F2430;
+}
+
+.detail-val.status-green {
+  color: #1F9D6C;
+}
+
+/* Download Button */
+.download-btn {
+  background-color: #F2A93B;
+  color: #16233F;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: #e09628;
+  transform: translateY(-1px);
+}
+
+@media print {
+  body {
+    background: none;
+  }
+  .download-btn {
+    display: none;
+  }
+  .cert-card {
+    border: none;
+    box-shadow: none;
+    max-width: 100%;
+  }
+}
+/* Certificate Action Buttons */
+
+.certificate-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  padding-bottom: 30px;
+}
+
+.print-btn,
+.download-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.print-btn {
+  background-color: #16233F;
+  color: #FFFFFF;
+}
+
+.print-btn:hover {
+  background-color: #24395F;
+}
+
+.download-btn {
+  background-color: #F2A93B;
+  color: #16233F;
+}
+
+.download-btn:hover {
+  background-color: #e09628;
+}
+
+/* Hide buttons when printing */
+@media print {
+  .certificate-actions {
+    display: none;
+  }
+
+  .cert-page {
+    background: white;
+    padding: 0;
+  }
+
+  .cert-card {
+    box-shadow: none;
+    border: none;
+  }
+}
